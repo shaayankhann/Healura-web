@@ -1,3 +1,11 @@
-/          /en/          301!
-/ar/*      /ar/:splat    200
-/en/*      /en/:splat    200
+# Redirect root based on the Accept-Language header (browser language)
+/
+  /ar/  Language=ar  302
+/
+  /en/  Language=*  302
+
+# Serve Arabic pages normally
+/ar/*   /ar/:splat   200
+
+# Serve English pages normally
+/en/*   /en/:splat   200
